@@ -1,3 +1,7 @@
+This project is a modified version of [Ping Pong WebGL] by MortimerGoro.
+Modified and extended by Tannhauser in 2025.
+
+
 Ping Pong WebGL
 =============
 
