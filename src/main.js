@@ -57,6 +57,18 @@
     
     function init(){
 
+        // Prevent running from file:// because asset loading via XHR will fail
+        if (window.location.protocol === 'file:') {
+            var message = 'Please run the game from a local web server instead of opening index.html directly (assets are loaded via XHR).';
+            console.error(message);
+
+            var warning = document.createElement('div');
+            warning.style.cssText = 'position:fixed;top:0;left:0;right:0;padding:12px;background:#b71c1c;color:#fff;font-family:sans-serif;font-size:14px;z-index:9999;';
+            warning.textContent = message;
+            document.body.appendChild(warning);
+            return;
+        }
+
         var canvas = document.createElement("canvas");
         canvas.screencanvas = true; //for cocoonjs
         canvas.width = window.innerWidth;
@@ -77,5 +89,5 @@
     }
     
     window.onload = init;
-    
+
 })();
