@@ -9,6 +9,16 @@ A Ping Pong game demo using Three.js and custom physics.
 
 Live demo: http://mortimergoro.github.io/PingPongWebGL/
 
+## Running locally
+
+Run the project from a local web server so textures and models can be fetched correctly (browsers block XHR when opening `file://` URLs). A quick way using Python 3:
+
+```bash
+python3 -m http.server 8000
+```
+
+Then browse to http://localhost:8000 and open `index.html`.
+
 It's a early version, there are many TODOs:
 * Improve physics
 * Improve gameplay
